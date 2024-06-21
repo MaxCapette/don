@@ -24,7 +24,7 @@ export default function Header() {
             </li>
             <li>
               <a href="/shape" className="">
-                Contact
+                Homev2
               </a>
             </li>
           </ul>
