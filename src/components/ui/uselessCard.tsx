@@ -21,7 +21,7 @@ export default function UselessCard({ fact, imageUrl }: UselessCardProps) {
         src= {imageUrl}
         width={200}
       />
-      <CardFooter className="h-4/5 before:bg-white/10 border-white/20 border-1 overflow-hidden p-5 absolute before:rounded-xl rounded-large shadow-small ml-1 z-10">
+      <CardFooter className="h-full w-full  overflow-hidden p-5 absolute before:rounded-xl shadow-small ml-1 z-10 bg-opacity-0 shadow-boxBlur backdrop-blur-lg rounded-lg border border-white border-opacity-20">
         <p className="">{fact}</p>
         
       </CardFooter>

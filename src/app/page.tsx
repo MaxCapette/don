@@ -17,9 +17,9 @@ import UselessButton2 from "@/components/ui/uselessButton2/uselessButton2";
 export default function Home() {
   return (
     <> 
-    <div className="flex justify-center"><Image  src="/images/logo.png" alt="logo" width={200} height={200} /></div>
+    <div className="absolute "><Image  src="/images/logo.png" alt="logo" width={50} height={50} /></div>
     
-    <div className="parallax-section xl:pt-60">
+    <div className="parallax-section ">
      
       <main className="container mx-auto mt-8 flex flex-col items-center gap-4">
         

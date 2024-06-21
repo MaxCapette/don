@@ -1,8 +1,8 @@
-"use client";
-import Link from "next/link";
+"use client";import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { capitalizeFirstLetter } from "../lib/utils";
 import Image from "next/image";
+import Loading from "@/app/loading";
 
 // Fonction pour récupérer les Pokémon depuis l'API
 async function fetchAllPokemons() {
@@ -17,6 +17,7 @@ export default function PokemonList() {
   const [allPokemons, setAllPokemons] = useState<any[]>([]);
   const [displayedPokemons, setDisplayedPokemons] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true); // État de chargement initial
 
   // Charger tous les Pokémon une fois
   useEffect(() => {
@@ -34,8 +35,10 @@ export default function PokemonList() {
         );
         setAllPokemons(detailedPokemons);
         setDisplayedPokemons(detailedPokemons);
+        setLoading(false); // Marquer le chargement comme terminé une fois les données chargées
       } catch (error) {
         console.error("Error loading all pokemons:", error);
+        setLoading(false); // Gérer l'erreur de chargement en marquant le chargement comme terminé
       }
     };
 
@@ -52,6 +55,11 @@ export default function PokemonList() {
     );
     setDisplayedPokemons(filteredPokemons);
   };
+
+  // Afficher un indicateur de chargement si les données sont en cours de chargement
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="container mx-auto">
@@ -92,3 +100,4 @@ export default function PokemonList() {
     </div>
   );
 }
+
