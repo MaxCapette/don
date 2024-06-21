@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 // Constant pour le nombre de Pokémon à charger à chaque fois
-const ITEMS_PER_PAGE = 20;
+const ITEMS_PER_PAGE = 100;
 
 // Fonction pour récupérer les Pokémon depuis l'API
 async function fetchPokemons(offset: number = 0) {
@@ -49,9 +49,9 @@ export default function PokemonList() {
   return (
     <div>
       <h1>Pokemon List</h1>
-      <ul>
+      <ul className="flex flex-wrap justify-center">
         {pokemons.map((pokemon: any) => (
-          <li key={pokemon.name}>
+          <li key={pokemon.name} className='hover:scale-110 transition duration-300'>
             <Link href={`/pokedex/${pokemon.name}`}>
               <div>
                 <p>{pokemon.name}</p>
