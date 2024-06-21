@@ -121,3 +121,7 @@ input {
 input:checked ~ .moon {
    display: none;
 }
+
+.gap {
+  gap: 2.5rem;
+}
