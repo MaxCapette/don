@@ -80,7 +80,7 @@ body, header, .uselessTitle {
 	transition: all 0.25s ease;
 }
 
-input {
+.sun {
 	z-index: 1;
 	width: 4.49rem;
 	height: 4.49rem;
