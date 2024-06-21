@@ -42,7 +42,7 @@ export default async function PokemonDetail({
           <strong>Height:</strong> {pokemon.height} decimetres
         </p>
         <p className="text-lg">
-          <strong>Weight:</strong> {pokemon.weight} hectograms
+          <strong>Weight:</strong> {pokemon.weight} kg
         </p>
         <p className="text-lg">
           <strong>Type:</strong>{" "}
