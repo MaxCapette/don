@@ -33,6 +33,7 @@ const Menu = () => {
           key={item}
           isSelected={index === selectedIndex}
           onItemClick={() => setSelectedIndex(index)} // Sélectionne l'élément lors du clic
+          showArrow={index === selectedIndex} // Affiche la flèche uniquement pour l'élément sélectionné
         >
           {item}
         </MenuItem>
@@ -42,13 +43,22 @@ const Menu = () => {
 };
 
 // Composant MenuItem pour afficher chaque élément du menu
-const MenuItem = ({ isSelected, onItemClick, children }: { isSelected: boolean; onItemClick: () => void; children: React.ReactNode; }) => {
+const MenuItem = ({ isSelected, onItemClick, showArrow, children }: { isSelected: boolean; onItemClick: () => void; showArrow: boolean; children: React.ReactNode; }) => {
   return (
-    <div
-      className={`p-4 text-2xl cursor-pointer ${isSelected ? 'font-bold text-blue-500' : 'text-gray-500'}`}
-      onClick={onItemClick} // Gère le clic pour sélectionner l'élément
-    >
-      {children}
+    <div className="relative">
+      <div
+        className={`p-4 text-2xl cursor-pointer ${isSelected ? 'font-bold text-blue-500' : 'text-gray-500'}`}
+        onClick={onItemClick} // Gère le clic pour sélectionner l'élément
+      >
+        {children}
+      </div>
+      {showArrow && (
+        <div className=" text-black absolute top-1/2 transform -translate-y-1/2 gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black pr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      )}
     </div>
   );
 };
