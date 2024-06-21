@@ -19,7 +19,7 @@ const Facts = () => {
   };
 
   return (
-    <section className="flex  justify-center items-center gap-4">
+    <section className="flex flex-wrap justify-center items-center gap-4 min-h-screen">
       {uselessFacts.slice(0, visibleFacts).map((fact) => (
         <Link href={`/facts/${fact.id}`} key={fact.id} className="hover:scale-110 transition duration-300">
           <UselessCard key={fact.id} fact={fact.fact} imageUrl={getRandomImageUrl()} />

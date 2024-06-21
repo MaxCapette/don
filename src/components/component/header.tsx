@@ -6,7 +6,8 @@ import UselessSocials from "../ui/uselessSocials";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full flex content-center items-center text-center h-20">
-      <ModeToggle />
+      <div className="absolute"><ModeToggle  /></div>
+      
       <div className="container mx-auto flex flex-col items-center ">
         <h1 className=" text-2xl font-bold">Useless Facts</h1>
         <nav>

@@ -16,9 +16,12 @@ import UselessMushroom from "@/components/ui/uselessMushroom/uselessMushroom";
 export default function Home() {
   return (
     <> 
-   
+    <div className="flex justify-center"><Image  src="/images/logo.png" alt="logo" width={200} height={200} /></div>
+    
     <div className="parallax-section xl:pt-60">
+     
       <main className="container mx-auto mt-8 flex flex-col items-center gap-4">
+        
        <UselessTitle />
         <Link href={"./facts"} ><UselessButton /></Link>
         <div><UselessAccordion /></div>
