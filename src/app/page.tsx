@@ -1,4 +1,4 @@
-import Header from "@/components/component/header";
+
 import "./globals.css";
 import Image from "next/image";
 import UselessAccordion from "@/components/component/uselessAccordion";

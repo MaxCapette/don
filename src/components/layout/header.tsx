@@ -1,6 +1,7 @@
 import Image from "next/image";
-import ModeToggle from "./ModeToggle";
+import ModeToggle from "../component/ModeToggle";
 import UselessSocials from "../ui/uselessSocials";
+import PokemonList from "@/datas/PokemonList";
 
 
 export default function Header() {
@@ -25,6 +26,11 @@ export default function Header() {
             <li>
               <a href="/shape" className="">
                 Homev2
+              </a>
+            </li>
+            <li>
+              <a href="/pokedex" className="">
+                Pokedex
               </a>
             </li>
           </ul>
