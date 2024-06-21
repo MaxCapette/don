@@ -1,8 +1,17 @@
 "use client"
+import { FC } from 'react';
 import "./uselessButton.css";
 import * as React from "react"
-export default function UselessButton() {
-    return (
-      <button className="button">See more ...</button>
-    );
+interface UselessButtonProps {
+  onClick: () => void;
 }
+
+const UselessButton: FC<UselessButtonProps> = ({ onClick }) => {
+  return (
+    <button onClick={onClick} className="btn button">
+      Change Fact
+    </button>
+  );
+};
+
+export default UselessButton;

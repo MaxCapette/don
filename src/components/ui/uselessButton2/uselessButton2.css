@@ -1,0 +1,25 @@
+.button {
+    --bg: #000;
+    --hover-bg: #ff90e8;
+    --hover-text: #000;
+    color: var(--bg-0);
+    cursor: pointer;
+    border: 1px solid var(--color-0);
+    border-radius: 4px;
+    padding: 0.4em 1em;
+    background: var(--color-0);
+    transition: 0.2s;
+  }
+  
+  .button:hover {
+    color: var(--color-0);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--bg-0);
+    box-shadow: 0.25rem 0.25rem var(--color-0);
+  }
+  
+  .button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  

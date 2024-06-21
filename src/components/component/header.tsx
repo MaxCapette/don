@@ -23,7 +23,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#" className="">
+              <a href="/shape" className="">
                 Contact
               </a>
             </li>
