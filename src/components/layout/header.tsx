@@ -33,6 +33,11 @@ export default function Header() {
                 Pokedex
               </a>
             </li>
+            <li>
+              <a href="/weatherPage" className="">
+                Weather
+              </a>
+            </li>
           </ul>
         </nav>
       
