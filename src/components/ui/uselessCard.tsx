@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import {Card, CardFooter} from "@nextui-org/card";
 import Image from "next/image";
@@ -14,7 +15,7 @@ export default function UselessCard({ fact, imageUrl }: UselessCardProps) {
       radius="lg"
       className="border-none  content-center justify-center flex flex-col items-center gap-4 w-max"
     >
-      <Image
+      <img
         alt="Woman listing to music"
         className="object-cover"
         height={200}

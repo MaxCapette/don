@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // app/[name].tsx
 import Image from "next/image";
 import Link from "next/link";
@@ -30,7 +31,7 @@ export default async function PokemonDetail({
         </Link>
       </div>
     <div className="flex flex-col items-center" >
-      <Image
+      <img
         src={pokemon.sprites.other["official-artwork"].front_default}
         alt={pokemon.name}
         width={400}
@@ -99,7 +100,7 @@ export default async function PokemonDetail({
             {pokemon.sprites.front_default && (
               <div>
                 <h3 className="capitalize">Front Default</h3>
-                <Image
+                <img
                   src={pokemon.sprites.front_default}
                   alt={`${pokemon.name} front default`}
                   className="w-full"
@@ -111,7 +112,7 @@ export default async function PokemonDetail({
             {pokemon.sprites.back_default && (
               <div>
                 <h3 className="capitalize">Back Default</h3>
-                <Image
+                <img
                   src={pokemon.sprites.back_default}
                   alt={`${pokemon.name} back default`}
                   className="w-full"
@@ -123,7 +124,7 @@ export default async function PokemonDetail({
             {pokemon.sprites.front_shiny && (
               <div>
                 <h3 className="capitalize">Front Shiny</h3>
-                <Image
+                <img
                   src={pokemon.sprites.front_shiny}
                   alt={`${pokemon.name} front shiny`}
                   className="w-full"
@@ -135,7 +136,7 @@ export default async function PokemonDetail({
             {pokemon.sprites.back_shiny && (
               <div>
                 <h3 className="capitalize">Back Shiny</h3>
-                <Image
+                <img
                   src={pokemon.sprites.back_shiny}
                   alt={`${pokemon.name} back shiny`}
                   className="w-full"

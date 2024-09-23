@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 
 import "./globals.css";
 import Image from "next/image";
@@ -17,7 +18,7 @@ import UselessButton2 from "@/components/ui/uselessButton2/uselessButton2";
 export default function Home() {
   return (
     <> 
-    <div className="absolute "><Image  src="/images/logo.png" alt="logo" width={50} height={50} /></div>
+    <div className="absolute "><img  src="/images/logo.png" alt="logo" width={50} height={50} /></div>
     
     <div className="parallax-section ">
      

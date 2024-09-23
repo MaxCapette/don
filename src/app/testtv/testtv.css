@@ -1,0 +1,15 @@
+body {
+    background: #000;
+  }
+  
+  .tv-noise {
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../public/static_tv_noise_high_quality.png');
+    animation: static 0.2s steps(10) infinite;
+  }
+  
+  @keyframes static {
+    0% { background-position: 0 0; }
+    100% { background-position: 100vw 100vh; }
+  }

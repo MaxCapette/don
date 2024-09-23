@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { capitalizeFirstLetter } from "../lib/utils";
@@ -81,7 +82,7 @@ export default function PokemonList() {
           >
             <Link href={`/pokedex/${pokemon.name}`}>
               {pokemon.sprites && (
-                <Image
+                <img
                   src={pokemon.sprites.other["official-artwork"].front_default}
                   alt={pokemon.name}
                   width={200}
